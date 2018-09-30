@@ -1498,6 +1498,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
+			text-transform: none;
 
 			&:before, &:after {
 				@include vendor('transition', 'width 0.85s ease');
@@ -1523,11 +1524,21 @@ $baseurl: '{{ site.baseurl }}/images';
 
 		p {
 			letter-spacing: _size(letter-spacing-alt);
-			text-transform: uppercase;
+			// text-transform: uppercase;
+			text-transform: none;
 
 			a {
 				color: inherit;
 			}
+		}
+
+		#pitch {
+			@include vendor('display', 'flex');
+			@include vendor('flex-direction', 'column');
+			@include vendor('justify-content', 'center');
+			text-align: center;
+			margin-left: 20%;
+			margin-right: 20%;
 		}
 
 		.more {
